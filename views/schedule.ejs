@@ -1,0 +1,62 @@
+<div class="">
+    <% for (course of courses){%>
+        <div class="bg-light m-5 p-2 border border-primary border-2">
+            <br> 
+                <%= course['subject'] %>
+                <%= course.coursenum %>
+                <strong><%= course.name %></strong>
+                <%= course.term %>
+                <div class="mb-1">
+                    <%=course.instructor[0] %>
+                    <%=course.instructor[1] %>
+                    (<%=course.instructor[2] %>)
+                </div>
+                <div><a href="/schedule/remove/<%= course._id %>">(delete from schedule)</a></div>
+                <div class="mb-1">
+                    Enrollment: <%=course.enrolled %>,
+                    Limit: <%=course.limit || 999 %>,
+                    Waitlist: <%= course.waiting %>
+                    <br>
+                    Times: <%= course.strTimes %>
+                 </div>
+                 <div class="">
+                    <em><%=course.details %></em>
+                 </div>
+                
+            </br>
+        </div> 
+        <p><a href="#" class="text-primary">
+            If you have taken this course before, please comment down below. We appreciate your opinion and hope to help more students who are considering to take this course now.
+        </a></p>
+        <img src="/images/comments.png" class="rounded float-left" alt="course" width="30%">
+        <form method="post" action="/comments"> 
+            <div class="form-group">
+              <label for="Classyear">Class Year</label>
+              <input type="text" name="classyear" class="form-control" id="Class year" aria-describedby="emailHelp" placeholder="Enter your class year:">
+            </div>
+            <div class="form-group">
+                <label for="Comments">Comments</label>
+                <input type="text" name="comments" class="form-control" id="examplecomments" placeholder="Comments">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Rate this course:</label>
+                <select class="form-control" name="rating" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="Comments">Course</label>
+                <input type="text" name="course" class="form-control" id="examplecomments" placeholder="Course">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Recommend</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form> 
+    <% } %>
+</div>

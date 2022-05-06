@@ -1,0 +1,53 @@
+
+
+    <div class="jumbotron">
+        <p class="fs-2"><a href="#" class="text-danger">Find your course here!</a></p>
+      
+        <p></p>
+    </div>
+
+    <!-- <p class="p-3 m-3 border border-primary bg-info"> -->
+        <p><a href="#" class="text-primary">
+        This web was designed to help students finds out the schedule for their classes.
+        You can search by course subject, course term, instructor email, and even any keywords you can think of.
+    </a></p>
+    <!-- </p> -->
+    <img src="/images/course.jpg" class="rounded float-left" alt="course" width="30%">
+    <img src="/images/pic2.jpg" class="rounded float-right" alt="header" width="30%">
+    <img src="/images/pic3.jpg" class="rounded float-right" alt="header" width="30%">
+    <% if (true || loggedIn) {%>  
+        <form method="post" action="/courses/bySubject">
+            Search by Subject: 
+              <input type="text" name="subject" 
+                     placeholder="e.g. COSI">
+            <input type="submit">
+        </form>
+        <br>
+        <form method="post" action="/courses/byInst">
+            Search by Instructor Email: 
+            <input type="text" name="email" 
+                   placeholder="e.g. tjhickey">
+            <input type="submit">
+        </form>
+        <br>
+        <form method="post" action="/courses/byName">
+            Search by Keyword:
+              <input type="text" name="name"
+                     placeholder="e.g. MATH">
+            <input type="submit">
+        </form>
+        <br>
+        
+        <a href="/schedule/show">Check out your schecule here!</a>
+        <p class="p-3 m-3 border border-primary bg-warning">
+            If you have any questions/concerns, please don't hesitate to contact us.
+            Our add: 415 South Street, Waltham, MA, USA.
+            Our email: app_info@brandeis.edu
+            Our cell: 617-925-3620
+     
+            We are looking forward to assist you. Enjoy Searching~
+         </p>
+         <img src="/images/pic1.jpg" alt="think" width="100%">
+    <% } %>
+
+

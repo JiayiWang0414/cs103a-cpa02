@@ -1,0 +1,19 @@
+<h1>
+    Comments-- Check out all of your comments below!
+  </h1>
+  <ul>
+    <img src="/images/opinion.png" class="rounded float-left" alt="course" width="30%">
+    <li>You can find every comment you have ever given below:</li>
+  </ul>
+  <h2>Comment History</h2>
+
+  <ol>
+    <% for (item of items){%>
+        <li class="mb-2">          
+            userId:<%= item.userId%><br>    
+            Rating:<%= item.rating%><br>
+            Comment:<%= item.comments%> <br>
+            Course:<%= item.course%> <br>
+        </li>
+    <% }%>
+</ol>
