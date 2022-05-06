@@ -1,4 +1,7 @@
 # cs103a-cpa02
+
+short movie link: https://brandeis.zoom.us/rec/share/XANARt-k3MSPc1nxKTy4FsOgdVRQoWfS5C85WychmRLHYMRe9NFQra_nilrz8STU.aZ3c5ZGCkdk74Uj0
+
 a: what my app does and how it works:
 My app is basically a course finder which enables unique comment feature.
 Once a user sign up/login:
@@ -17,14 +20,6 @@ They can search a course using the search features(I attached the screenshot in 
  screenshot:https://drive.google.com/file/d/1IlqdnOUvVNDwmpS4gKxaawK0BZD6iZ3-/view?usp=sharing
 
  Any user can repeat this process as many times as they want.
-
-
-
-
-
-
-
-
 
 
 
