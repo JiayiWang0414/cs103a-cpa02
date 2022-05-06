@@ -35,9 +35,6 @@ const courses = require('./public/data/courses20-21.json')
 
 const mongoose = require( 'mongoose' );
 const mongodb_URI= process.env.mongodb_URI;
-//const mongodb_URI = 'mongodb://localhost:27017/cs103a_todo'
-//const mongodb_URI = 'mongodb+srv://cs_sj:BrandeisSpr22@cluster0.kgugl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-//mongodb+srv://cs103a:<password>@cluster0.kgugl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 //my own database
 //const mongodb_URI = 'mongodb+srv://jywjessica:20000414@clustercs103a.bynpc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
